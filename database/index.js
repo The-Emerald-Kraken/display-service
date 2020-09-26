@@ -1,47 +1,6 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
+// const { Sequelize, DataTypes } = require('sequelize');
 const faker = require('faker');
-
-const sequelize = new Sequelize('inventory', 'student', 'student', {
-  host: 'localhost',
-  dialect: 'mysql',
-});
-
-class Products extends Model { }
-
-Products.init({
-  id: {
-    type: DataTypes.INTEGER,
-    allowNULL: false,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  product_name: {
-    type: DataTypes.STRING,
-    allowNULL: false,
-  },
-  rating: {
-    type: DataTypes.INTEGER,
-  },
-  price: {
-    type: DataTypes.STRING,
-    allowNULL: false,
-  },
-  color: {
-    type: DataTypes.STRING,
-    allowNULL: false,
-  },
-  description: {
-    type: DataTypes.STRING,
-    allowNULL: false,
-  },
-  clothing_type: {
-    type: DataTypes.STRING,
-    allowNULL: false,
-  },
-}, {
-  sequelize,
-  modelName: 'Products',
-});
+const Model = require('./model.js');
 
 const seed = () => {
   let counter = 0;
@@ -60,9 +19,9 @@ const seed = () => {
     };
     const picked = picker('pants', 'shirt');
     const description = faker.commerce.productDescription();
-    Products.sync({ force: true })
+    Model.sync({ force: true })
       .then(() => (
-        Products.create({
+        Model.create({
           product_name: productName,
           rating,
           price,
