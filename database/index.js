@@ -10,6 +10,7 @@ const seed = () => {
     const price = Number.parseFloat(prices(10, 250)).toFixed(2);
     const rating = Math.ceil(Math.random() * 5);
     const color = faker.commerce.color();
+    const image = `https://fecclothes.s3-us-west-2.amazonaws.com/Project/${counter + 1}.jpg`;
     const picker = (pants, shirt) => {
       const pick = Math.floor(Math.random() * 2);
       if (pick === 1) {
@@ -27,6 +28,7 @@ const seed = () => {
           price,
           color,
           description,
+          image,
           clothing_type: picked,
         })
       ));
