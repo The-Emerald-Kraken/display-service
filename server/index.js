@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/api/products/:id', async (req, res) => {
   await Model.findOne({ where: { id: req.params.id } })
-    .then((data) => res.json(data))
+    .then((data) => res.send(data))
     .catch((err) => { console.log(err); });
 });
 
