@@ -1,31 +1,34 @@
 import React from 'react';
+import axios from 'axios';
+
 import Pictures from './pictures';
 
 class App extends React.Component {
-  constructor() {
-    super();
-    // this.setState({
-    //   products: null,
-    // });
-    // this.getData = this.getData.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: [],
+    };
+    this.getData = this.getData.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.getData();
-  // }
+  componentDidMount() {
+    this.getData(2);
+  }
 
-  // getData() {
-  //   axios.get(`/api/products/${id}`)
-  //     .then((res) => this.setState({
-  //       products: res.data,
-  //     }));
-  // }
+  getData(id) {
+    axios.get(`/api/products/${id}`)
+      .then(({ data }) => {
+        this.setState({
+          product: data,
+        });
+      });
+  }
 
   render() {
+    const { product } = this.state;
     return (
-      <div>
-        <h1>Hello from react</h1>
-      </div>
+      <Pictures image={product.image} />
     );
   }
 }
