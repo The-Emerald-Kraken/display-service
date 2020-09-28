@@ -30,6 +30,10 @@ module.exports = sequelize.define('Products', {
     type: DataTypes.STRING,
     allowNULL: false,
   },
+  image: {
+    type: DataTypes.STRING,
+    allowNULL: false,
+  },
   clothing_type: {
     type: DataTypes.STRING,
     allowNULL: false,
