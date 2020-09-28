@@ -10,9 +10,8 @@ class App extends React.Component {
     // this.getData = this.getData.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.getData();
-  // }
+  componentDidMount() {
+  }
 
   // getData() {
   //   axios.get(`/api/products/${id}`)
