@@ -1,5 +1,14 @@
 {
-  "name": "mr_beer_clone_joe",
+  "name": "rei_clone",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.js"
+    ]
+  },
   "version": "",
   "description": "",
   "main": "index.js",
@@ -11,11 +20,15 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
-    "seed-db": "node database/index.js"
+    "seed-db": "node database/index.js",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest-enzyme": "^7.1.2",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mysql2": "^2.2.5",
@@ -30,8 +43,8 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
-    "enzyme": "^3.11.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
