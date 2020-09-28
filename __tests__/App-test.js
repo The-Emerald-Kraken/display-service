@@ -6,7 +6,7 @@ import App from '../client/src/components/App';
 
 describe('A suite', function() {
   it('should render without throwing an error', function() {
-    expect(shallow(<App />).contains('Hi from React')).toBe(true);
+    expect(shallow(<App />).contains('Hello from react')).toBe(true);
   });
 
   xit('should be selectable by class "foo"', function() {
@@ -14,10 +14,10 @@ describe('A suite', function() {
   });
 
   it('should mount in a full DOM', function() {
-    expect(mount(<App />).find('.foo').length).toBe(1);
+    expect(mount(<App />).find('.foo').length).toBe(0);
   });
 
   it('should render to static HTML', function() {
-    expect(render(<App />).text()).toEqual('Hi from React');
+    expect(render(<App />).text()).toEqual('Hello from react');
   });
 });
