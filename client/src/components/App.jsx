@@ -1,4 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h1>Hello, World</h1>, document.getElementById('app'));
+class App extends React.Component {
+  constructor() {
+    super()
+  }
+
+  render() {
+    return (
+      <div>
+        <h1 className="foo">Hi from React</h1>
+      </div>
+    )
+  }
+}
+
+export default App;

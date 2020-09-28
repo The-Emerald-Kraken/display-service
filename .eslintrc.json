@@ -18,6 +18,7 @@
     "plugins": [
         "react"
     ],
+    "ignorePatterns": ["__tests__/*", "setupTests.js"],
     "rules": {
     }
 }
