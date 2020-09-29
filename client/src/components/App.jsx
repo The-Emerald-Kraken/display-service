@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 
 import Pictures from './pictures';
+import Description from './description';
+import Name from './name';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,7 +39,11 @@ class App extends React.Component {
   render() {
     const { product } = this.state;
     return (
-      <Pictures image={product.image} />
+      <div>
+        <Name name={product.product_name} />
+        <Pictures image={product.image} />
+        <Description description={product.description} />
+      </div>
     );
   }
 }
