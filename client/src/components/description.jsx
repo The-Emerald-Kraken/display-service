@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-   font-family: 'Stuart,Georgia,serif;';
+   font-family: Stuart,Georgia,serif;
    font-size: 25px;
    font-weight: 540;
    text-align: center;
-   margin: 350px auto auto auto;
+   margin: 250px auto auto auto;
    background-color: #efeee2;
    height: 100px;
    width: 1360px;
