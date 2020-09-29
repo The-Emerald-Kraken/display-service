@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrap = styled.div`
-margin-top: 150px
+margin-top: 150px;
 `;
 
 const Price = styled.div`
