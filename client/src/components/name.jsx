@@ -2,35 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-    float: right;
-    display: block;
-    postion: fixed;
-    margin-right: 400px;
-`;
 const Logo = styled.div`
     font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     color: #347CB1;
+    margin: 0px;
 `;
 const Productname = styled.div`
     font-family:  Stuart,Georgia,serif;
     color: #2e2e2e;
     font-size: 35px;
     font-weight: 535;
+    margin: 0px;
 `;
 
 const Name = ({ name }) => (
-  <Wrapper>
+  <div>
     <Logo>
-      <p>REI Co-op</p>
+      <div>REI Co-op</div>
     </Logo>
     <Productname>
       <span> REI Co-op  </span>
       <span>{name}</span>
     </Productname>
-  </Wrapper>
+  </div>
+
 );
 
 Name.propTypes = {

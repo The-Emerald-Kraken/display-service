@@ -11,7 +11,7 @@ const Wrapper = styled.div`
    background-color: #efeee2;
    height: 100px;
    width: 1360px;
-   padding: 20px 40px 20px ;
+   padding: 20px 40px 20px;
    `;
 const Description = ({ description }) => (
   <Wrapper>
