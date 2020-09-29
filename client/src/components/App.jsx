@@ -7,6 +7,7 @@ import Description from './description';
 import Name from './name';
 import Star from './rating';
 import Price from './price';
+import Color from './color';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class App extends React.Component {
           <Name name={product.product_name} />
           <Star ratings={product.rating} id={product.id} />
           <Price price={product.price} />
+          <Color color={product.color} price={product.price} />
         </Wrapper>
         <Image>
           <Pictures image={product.image} />
@@ -57,13 +59,13 @@ class App extends React.Component {
   }
 }
 const Image = styled.div`
-    margin: 200px 0px 0px 600px;
+    margin: 300px 0px 0px 600px;
 `;
 
 const Wrapper = styled.div`
     float: right;
-    margin: 0px 200px 0px 50px;
-    height: 1500px;
+    margin: 5px 200px 0px 50px;
+    height: 700px;
     width: 600px;
     `;
 export default App;

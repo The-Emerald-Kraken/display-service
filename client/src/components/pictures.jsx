@@ -6,7 +6,7 @@ const Img = styled.img`
    background-image: url(${(props) => props.inputSrc});
    background-size: cover;
    background-repeat: no-repeat;
-   height: 750px;
+   height: 675px;
    width: 450px;
    `;
 const Pictures = ({ image }) => (
