@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-   margin: 200px auto auto 600px;
+   margin: 200px 100px auto 600px;
    `;
 const Img = styled.img`
    background-image: url(${(props) => props.inputSrc});
-   background-size: contain;
+   background-size: cover;
    background-repeat: no-repeat;
-   height: 775px;
-   width: 483px;
+   height: 750px;
+   width: 375px;
    `;
 const Pictures = ({ image }) => (
   <Wrapper>
