@@ -1,10 +1,7 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 
-import App from '../client/src/components/App';
-
-
+import Description from '../client/src/components/description';
 
 describe('A suite', function() {
   xit('should render without throwing an error', function() {

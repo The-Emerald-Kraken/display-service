@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-   margin: 200px 1000px auto 600px;
+   margin: 200px auto auto 600px;
    `;
 const Img = styled.img`
    background-image: url(${(props) => props.inputSrc});
