@@ -60,7 +60,7 @@ const Image = styled.div`
 
 const Wrapper = styled.div`
     float: right;
-    margin: 0px 100px 0px 150px;
+    margin: 0px 200px 0px 50px;
     height: 1500px;
     width: 600px;
     `;
