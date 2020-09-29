@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 import Pictures from './pictures';
 import Description from './description';
 import Name from './name';
+import Star from './rating';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class App extends React.Component {
       product: {
         id: 1,
         product_name: 'Ergonomic Rubber Hat',
-        rating: 5,
+        rating: 4,
         price: '177.32',
         color: 'lime',
         description: 'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
@@ -40,12 +42,26 @@ class App extends React.Component {
     const { product } = this.state;
     return (
       <div>
-        <Name name={product.product_name} />
-        <Pictures image={product.image} />
+        <Wrapper>
+          <Name name={product.product_name} />
+          <Star rating={product.rating} id={product.id} />
+        </Wrapper>
+        <Image>
+          <Pictures image={product.image} />
+        </Image>
         <Description description={product.description} />
       </div>
     );
   }
 }
+const Image = styled.div`
+    margin: 200px 0px 0px 600px;
+`;
 
+const Wrapper = styled.div`
+    float: right;
+    margin: 0px 200px 0px 50px;
+    height: 1500px;
+    width: 600px;
+    `;
 export default App;
