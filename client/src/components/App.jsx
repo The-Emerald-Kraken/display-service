@@ -6,6 +6,7 @@ import Pictures from './pictures';
 import Description from './description';
 import Name from './name';
 import Star from './rating';
+import Price from './price';
 
 class App extends React.Component {
   constructor(props) {
@@ -44,7 +45,8 @@ class App extends React.Component {
       <div>
         <Wrapper>
           <Name name={product.product_name} />
-          <Star rating={product.rating} id={product.id} />
+          <Star ratings={product.rating} id={product.id} />
+          <Price price={product.price} />
         </Wrapper>
         <Image>
           <Pictures image={product.image} />
