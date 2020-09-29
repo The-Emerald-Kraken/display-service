@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const randomNumber = Math.floor(Math.random() * 1000);
 
-function Star({ rating, id }) {
-  const [score] = useState((rating / 5) * 100);
+function Star({ ratings, id }) {
+  const score = (ratings / 5) * 100;
 
   return (
     <div>
       <StarStyle inputWidth={score} />
-      <span>{`${rating} | ${randomNumber}`}</span>
+      <span>{`${ratings} | ${randomNumber}`}</span>
       <Item>
         {`Item #${id}`}
       </Item>
@@ -19,14 +19,14 @@ function Star({ rating, id }) {
 }
 
 Star.propTypes = {
-  rating: PropTypes.number.isRequired,
+  ratings: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
 };
 const Item = styled.span`
     margin: 125px;
 `;
 
-const StarStyle = styled.span`
+const StarStyle = styled.div`
 color: #c5c5c5;
 margin: 100x 300px 0px 0px
 height: 25px;
