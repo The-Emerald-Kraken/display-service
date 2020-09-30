@@ -7,7 +7,7 @@ const Wrapper = styled.div`
    font-size: 25px;
    font-weight: 540;
    text-align: center;
-   margin: 250px auto auto auto;
+   margin: 350px auto auto auto;
    background-color: #efeee2;
    height: 100px;
    width: 1360px;

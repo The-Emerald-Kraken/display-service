@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Minus = styled.button`
-
+background-image: url('https://curbcarplusminus.s3-us-west-2.amazonaws.com/minus-horizontal-straight-line.png');
+background-size: contain;
+background-repeat: no-repeat;
 border: .1rem solid #c5c5c5;
 border-radius: 50%;
 padding: .5rem;
@@ -11,6 +13,9 @@ margin-right: 5px;
 width: min-content;
 `;
 const Plus = styled.button`
+background-image: url('https://curbcarplusminus.s3-us-west-2.amazonaws.com/plus.png');
+background-size: contain;
+background-repeat: no-repeat;
     border: .1rem solid #c5c5c5;
     border-radius: 100%;
     padding: .5rem;

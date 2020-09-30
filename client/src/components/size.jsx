@@ -78,7 +78,7 @@ width: min-content;
 margin: 0px 10px 10px 0px;
 padding: 5px 40px;
 :hover {
-  background-color:grey;
+  background-color:#c5c5c5;
 }
 `;
 const Flexed = styled.div`
