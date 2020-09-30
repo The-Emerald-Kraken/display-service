@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`A suite should render without throwing an error 1`] = `
+exports[`A suite should render a description without throwing an error 1`] = `
 <div
   className="a5mel5-0 iRpgjs"
 >
@@ -10,7 +10,7 @@ exports[`A suite should render without throwing an error 1`] = `
 </div>
 `;
 
-exports[`A suite should render without throwing an error 2`] = `
+exports[`A suite should render a name without throwing an error 1`] = `
 <div>
   <div
     className="sdphye-0 ghDmRY"
@@ -32,29 +32,7 @@ exports[`A suite should render without throwing an error 2`] = `
 </div>
 `;
 
-exports[`A suite should render without throwing an error 3`] = `
-<img
-  className="nuhrh2-0 bpmCqm"
-/>
-`;
-
-exports[`A suite should render without throwing an error 4`] = `
-<div>
-  <div
-    className="sc-179h418-1 iTihlm"
-  />
-  <span>
-    4 | 292
-  </span>
-  <span
-    className="sc-179h418-0 hPXnqg"
-  >
-    Item  #1
-  </span>
-</div>
-`;
-
-exports[`A suite should render without throwing an error 5`] = `
+exports[`A suite should render a price without throwing an error 1`] = `
 <div
   className="sc-5tcji-0 gNWCqj"
 >
@@ -71,9 +49,57 @@ exports[`A suite should render without throwing an error 5`] = `
 </div>
 `;
 
-exports[`A suite should render without throwing an error 6`] = `
+exports[`A suite should render a quantity box without throwing an error 1`] = `
+<div>
+  <div
+    className="b4lb5i-3 hfWKjb"
+  >
+    Quantity
+  </div>
+  <button
+    className="b4lb5i-0 cHVCDQ"
+    data-ui="quantity-decrement"
+  />
+  <input
+    className="b4lb5i-2 ijUctX"
+    data-ui="product-buygrid-quantity-box"
+    max="9999"
+    min="1"
+    type="number"
+  />
+  <button
+    className="b4lb5i-1 dPjpaU"
+    data-ui="quantity-increment"
+  />
+  <hr />
+</div>
+`;
+
+exports[`A suite should render a rating and number of ratings without throwing an error 1`] = `
+<div>
+  <div
+    className="sc-179h418-1 iTihlm"
+  />
+  <span>
+    4 | 292
+  </span>
+  <span
+    className="sc-179h418-0 hPXnqg"
+  >
+    Item  #1
+  </span>
+</div>
+`;
+
+exports[`A suite should render an image without throwing an error 1`] = `
+<img
+  className="nuhrh2-0 bpmCqm"
+/>
+`;
+
+exports[`A suite should render color and price without throwing an error 1`] = `
 <div
-  className="sgaphz-0 kbROOT"
+  className="sgaphz-0 cFlZuE"
 >
   <div>
     Color : maroon
@@ -88,5 +114,39 @@ exports[`A suite should render without throwing an error 6`] = `
   <div
     className="sgaphz-2 fvaWoO"
   />
+</div>
+`;
+
+exports[`A suite should render size options without throwing an error 1`] = `
+<div>
+  <div
+    className="k7f4n0-0 eXNPCd"
+  >
+    Size
+  </div>
+  <span
+    className="k7f4n0-1 fiZtSX"
+  >
+    Small
+  </span>
+  <span
+    className="k7f4n0-1 fiZtSX"
+  >
+    Medium
+  </span>
+  <div
+    className="k7f4n0-2 eoQAub"
+  >
+    <span
+      className="k7f4n0-1 fiZtSX"
+    >
+      Large
+    </span>
+    <span
+      className="k7f4n0-1 fiZtSX"
+    >
+      X-Large
+    </span>
+  </div>
 </div>
 `;

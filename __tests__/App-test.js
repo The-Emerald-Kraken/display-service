@@ -11,6 +11,8 @@ import Pictures from '../client/src/components/pictures';
 import Price from '../client/src/components/price';
 import Color from '../client/src/components/color';
 import Size from '../client/src/components/size';
+import Quantity from '../client/src/components/quantity';
+
 
 
 
@@ -20,35 +22,45 @@ describe('A suite', function() {
   it('have a product object', function() {
     expect(shallow(<App />).find('product')).toEqual({});
   });
-  it('should render without throwing an error', function() {
+  it('should render a description without throwing an error', function() {
     const descriptions =renderer
     .create(<Description description={'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design'} />);
     expect(descriptions).toMatchSnapshot();
   });
-  it('should render without throwing an error', function() {
+  it('should render a name without throwing an error', function() {
     const names =renderer
     .create(<Name name={'Ergonomic Rubber Hat'}/>);
     expect(names).toMatchSnapshot();
   });
-  it('should render without throwing an error', function() {
+  it('should render an image without throwing an error', function() {
     const images =renderer
     .create(<Pictures image={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'}/>);
     expect(images).toMatchSnapshot();
   });
-  it('should render without throwing an error', function() {
+  it('should render a rating and number of ratings without throwing an error', function() {
     const rating =renderer
     .create(<Rating ratings={4} id={1} ratingsAmt={292}/>);
     expect(rating).toMatchSnapshot();
   });
-  it('should render without throwing an error', function() {
+  it('should render a price without throwing an error', function() {
     const pricing =renderer
     .create(<Price price={'186.48'}/>);
     expect(pricing).toMatchSnapshot();
   });
-  it('should render without throwing an error', function() {
+  it('should render color and price without throwing an error', function() {
     const colors =renderer
     .create(<Color price={'186.48'} color={'maroon'}/>);
     expect(colors).toMatchSnapshot();
+  });
+  it('should render size options without throwing an error', function() {
+    const sizes =renderer
+    .create(<Size size={'shirts'} />);
+    expect(sizes).toMatchSnapshot();
+  });
+  it('should render a quantity box without throwing an error', function() {
+    const quantity =renderer
+    .create(<Quantity />);
+    expect(quantity).toMatchSnapshot();
   });
 });
 
