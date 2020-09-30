@@ -9,6 +9,7 @@ import Star from './rating';
 import Price from './price';
 import Color from './color';
 import Size from './size';
+import Quantity from './quantity';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,6 +53,7 @@ class App extends React.Component {
           <Price price={product.price} />
           <Color color={product.color} price={product.price} />
           <Size size={product.clothing_type} />
+          <Quantity />
         </Wrapper>
         <Image>
           <Pictures image={product.image} />
