@@ -18,6 +18,9 @@ module.exports = sequelize.define('Products', {
   rating: {
     type: DataTypes.INTEGER,
   },
+  ratingsAmt: {
+    type: DataTypes.INTEGER,
+  },
   price: {
     type: DataTypes.STRING,
     allowNULL: false,

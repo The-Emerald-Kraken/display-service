@@ -8,6 +8,7 @@ import Name from './name';
 import Star from './rating';
 import Price from './price';
 import Color from './color';
+import Size from './size';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,20 +16,21 @@ class App extends React.Component {
     this.state = {
       product: {
         id: 1,
-        product_name: 'Ergonomic Rubber Hat',
+        product_name: 'Tasty Fresh Car',
         rating: 4,
-        price: '177.32',
-        color: 'lime',
-        description: 'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
+        ratingsAmt: 421,
+        price: '186.48',
+        color: 'maroon',
+        description: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
         image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
-        clothing_type: 'shirt',
+        clothing_type: 'pants',
       },
     };
     this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
-    this.getData(2);
+    this.getData(1);
   }
 
   getData(id) {
@@ -46,9 +48,10 @@ class App extends React.Component {
       <div>
         <Wrapper>
           <Name name={product.product_name} />
-          <Star ratings={product.rating} id={product.id} />
+          <Star ratings={product.rating} id={product.id} ratingsAmt={product.ratingsAmt} />
           <Price price={product.price} />
           <Color color={product.color} price={product.price} />
+          <Size size={product.clothing_type} />
         </Wrapper>
         <Image>
           <Pictures image={product.image} />
@@ -59,13 +62,13 @@ class App extends React.Component {
   }
 }
 const Image = styled.div`
-    margin: 300px 0px 0px 600px;
+    margin: 150px 0px 0px 600px;
 `;
 
 const Wrapper = styled.div`
     float: right;
-    margin: 5px 200px 0px 50px;
+    margin: 5px 400px 0px 50px;
     height: 700px;
-    width: 600px;
+    width: 400px;
     `;
 export default App;
