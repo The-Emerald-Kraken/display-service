@@ -12,6 +12,7 @@ import Price from '../client/src/components/price';
 import Color from '../client/src/components/color';
 import Size from '../client/src/components/size';
 import Quantity from '../client/src/components/quantity';
+import Buttons from '../client/src/components/buttons';
 
 
 
@@ -61,6 +62,11 @@ describe('A suite', function() {
     const quantity =renderer
     .create(<Quantity />);
     expect(quantity).toMatchSnapshot();
+  });
+  it('should render a quantity box without throwing an error', function() {
+    const buttons =renderer
+    .create(<Buttons price ={'186.48'}/>);
+    expect(buttons).toMatchSnapshot();
   });
 });
 

@@ -2,7 +2,7 @@
 
 exports[`A suite should render a description without throwing an error 1`] = `
 <div
-  className="a5mel5-0 iRpgjs"
+  className="a5mel5-0 cdCiKx"
 >
   <p>
     The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design
@@ -57,7 +57,7 @@ exports[`A suite should render a quantity box without throwing an error 1`] = `
     Quantity
   </div>
   <button
-    className="b4lb5i-0 cHVCDQ"
+    className="b4lb5i-0 fpcTTc"
     data-ui="quantity-decrement"
   />
   <input
@@ -68,10 +68,85 @@ exports[`A suite should render a quantity box without throwing an error 1`] = `
     type="number"
   />
   <button
-    className="b4lb5i-1 dPjpaU"
+    className="b4lb5i-1 hWdolp"
     data-ui="quantity-increment"
   />
   <hr />
+</div>
+`;
+
+exports[`A suite should render a quantity box without throwing an error 2`] = `
+<div>
+  <div
+    className="dehvk0-0 iqomMV"
+  >
+    <img
+      className="dehvk0-2 fsqUKm"
+    />
+    <p
+      className="dehvk0-1 hVyiMz"
+    >
+      Curbside Pickup available at select locations.
+    </p>
+    <span
+      className="dehvk0-3 jzgGcO"
+    >
+      Learn more
+    </span>
+  </div>
+  <div>
+    <input
+      className="dehvk0-4 fSnuWg"
+      name="ship"
+      type="radio"
+    />
+    <label
+      className="dehvk0-5 jKAiXo"
+    >
+      Ship to address
+    </label>
+  </div>
+  <div>
+    <input
+      className="dehvk0-4 fSnuWg"
+      name="ship"
+      type="radio"
+    />
+    <label
+      className="dehvk0-5 jKAiXo"
+    >
+      Pick up at store
+    </label>
+  </div>
+  <span
+    className="dehvk0-7 eKFhDS"
+  >
+    Find a store near you
+  </span>
+  <button
+    className="dehvk0-6 dTZmUs"
+  >
+    Add to cart $186.48
+  </button>
+  <div>
+    <button
+      className="dehvk0-8 jHCeBt"
+    >
+      Add to wish list
+    </button>
+    <button
+      className="dehvk0-9 kmteHH"
+    >
+      Add to registry
+    </button>
+  </div>
+  <div>
+    <div
+      className="dehvk0-10 lgcpRq"
+    >
+      REI return policy
+    </div>
+  </div>
 </div>
 `;
 
@@ -125,12 +200,12 @@ exports[`A suite should render size options without throwing an error 1`] = `
     Size
   </div>
   <span
-    className="k7f4n0-1 fiZtSX"
+    className="k7f4n0-1 jQSePz"
   >
     Small
   </span>
   <span
-    className="k7f4n0-1 fiZtSX"
+    className="k7f4n0-1 jQSePz"
   >
     Medium
   </span>
@@ -138,12 +213,12 @@ exports[`A suite should render size options without throwing an error 1`] = `
     className="k7f4n0-2 eoQAub"
   >
     <span
-      className="k7f4n0-1 fiZtSX"
+      className="k7f4n0-1 jQSePz"
     >
       Large
     </span>
     <span
-      className="k7f4n0-1 fiZtSX"
+      className="k7f4n0-1 jQSePz"
     >
       X-Large
     </span>
