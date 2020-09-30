@@ -9,6 +9,7 @@ const seed = () => {
     const prices = (min, max) => ((Math.random() * (max - min) + min));
     const price = Number.parseFloat(prices(10, 250)).toFixed(2);
     const rating = Math.ceil(Math.random() * 5);
+    const ratingsAmt = Math.floor(Math.random() * 1000);
     const color = faker.commerce.color();
     const image = `https://fecclothes.s3-us-west-2.amazonaws.com/Project/${counter + 1}.jpg`;
     const picker = (pants, shirt) => {
@@ -25,6 +26,7 @@ const seed = () => {
         Model.create({
           product_name: productName,
           rating,
+          ratingsAmt,
           price,
           color,
           description,

@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A suite should render without throwing an error 1`] = `
+<div
+  className="a5mel5-0 iRpgjs"
+>
+  <p>
+    The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design
+  </p>
+</div>
+`;
+
+exports[`A suite should render without throwing an error 2`] = `
+<div>
+  <div
+    className="sdphye-0 ghDmRY"
+  >
+    <div>
+      REI Co-op
+    </div>
+  </div>
+  <div
+    className="sdphye-1 jAjLYf"
+  >
+    <span>
+       REI Co-op  
+    </span>
+    <span>
+      Ergonomic Rubber Hat
+    </span>
+  </div>
+</div>
+`;
+
+exports[`A suite should render without throwing an error 3`] = `
+<img
+  className="nuhrh2-0 bpmCqm"
+/>
+`;
+
+exports[`A suite should render without throwing an error 4`] = `
+<div>
+  <div
+    className="sc-179h418-1 iTihlm"
+  />
+  <span>
+    4 | 292
+  </span>
+  <span
+    className="sc-179h418-0 hPXnqg"
+  >
+    Item  #1
+  </span>
+</div>
+`;
+
+exports[`A suite should render without throwing an error 5`] = `
+<div
+  className="sc-5tcji-0 gNWCqj"
+>
+  <span>
+    $186.48
+  </span>
+  <div
+    className="sc-5tcji-1 gZZJKx"
+  >
+    <p>
+      Orders of $50 or more ship for free.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`A suite should render without throwing an error 6`] = `
+<div
+  className="sgaphz-0 kbROOT"
+>
+  <div>
+    Color : maroon
+  </div>
+  <div
+    className="sgaphz-1 ckHUWv"
+  >
+    <div>
+      $186.48
+    </div>
+  </div>
+  <div
+    className="sgaphz-2 fvaWoO"
+  />
+</div>
+`;
