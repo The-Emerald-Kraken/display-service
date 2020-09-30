@@ -24,7 +24,7 @@ class App extends React.Component {
         color: 'maroon',
         description: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
         image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
-        clothing_type: 'pants',
+        clothing_type: 'shirts',
       },
     };
     this.getData = this.getData.bind(this);
