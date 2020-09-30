@@ -10,6 +10,7 @@ import Price from './price';
 import Color from './color';
 import Size from './size';
 import Quantity from './quantity';
+import Buttons from './buttons';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,30 +48,42 @@ class App extends React.Component {
     const { product } = this.state;
     return (
       <div>
-        <Wrapper>
-          <Name name={product.product_name} />
-          <Star ratings={product.rating} id={product.id} ratingsAmt={product.ratingsAmt} />
-          <Price price={product.price} />
-          <Color color={product.color} price={product.price} />
-          <Size size={product.clothing_type} />
-          <Quantity />
-        </Wrapper>
-        <Image>
-          <Pictures image={product.image} />
-        </Image>
-        <Description description={product.description} />
+        <Header />
+        <div>
+          <Wrapper>
+            <Name name={product.product_name} />
+            <Star ratings={product.rating} id={product.id} ratingsAmt={product.ratingsAmt} />
+            <Price price={product.price} />
+            <Color color={product.color} price={product.price} />
+            <Size size={product.clothing_type} />
+            <Quantity />
+            <Buttons price={product.price} />
+          </Wrapper>
+          <Image>
+            <Pictures image={product.image} />
+          </Image>
+          <Description description={product.description} />
+        </div>
       </div>
     );
   }
 }
 const Image = styled.div`
-    margin: 150px 0px 0px 600px;
+    margin: 20px 0px 0px 600px;
 `;
 
 const Wrapper = styled.div`
     float: right;
     margin: 5px 400px 0px 50px;
     height: 700px;
-    width: 400px;
+    width: 350px;
     `;
+const Header = styled.img`
+background-image: url('https://curbcarplusminus.s3-us-west-2.amazonaws.com/REItop.png');
+background-size: cover;
+height: 250px;
+width: 1945px;
+clip-path: inset(1px);
+margin: auto;
+`;
 export default App;
