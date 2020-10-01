@@ -8,6 +8,7 @@ const Img = styled.img`
    background-repeat: no-repeat;
    height: 675px;
    width: 450px;
+   clip-path: inset(1px);
    `;
 const Pictures = ({ image }) => (
 

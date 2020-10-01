@@ -37,6 +37,10 @@ module.exports = sequelize.define('Products', {
     type: DataTypes.STRING,
     allowNULL: false,
   },
+  carousel: {
+    type: DataTypes.STRING(1000),
+    allowNULL: false,
+  },
   clothing_type: {
     type: DataTypes.STRING,
     allowNULL: false,

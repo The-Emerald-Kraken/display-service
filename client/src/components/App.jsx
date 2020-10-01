@@ -11,6 +11,7 @@ import Color from './color';
 import Size from './size';
 import Quantity from './quantity';
 import Buttons from './buttons';
+import Carousel from './carousel';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class App extends React.Component {
         color: 'maroon',
         description: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
         image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
+        carousel: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
         clothing_type: 'shirts',
       },
     };
@@ -32,7 +34,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getData(1);
+    this.getData(13);
   }
 
   getData(id) {
@@ -59,6 +61,7 @@ class App extends React.Component {
             <Quantity />
             <Buttons price={product.price} />
           </Wrapper>
+          <Carousel carousel={product.carousel} />
           <Image>
             <Pictures image={product.image} />
           </Image>
@@ -69,12 +72,12 @@ class App extends React.Component {
   }
 }
 const Image = styled.div`
-    margin: 20px 0px 0px 600px;
+    margin: -590px 0px 0px 650px;
 `;
 
 const Wrapper = styled.div`
     float: right;
-    margin: 5px 400px 0px 50px;
+    margin: -80px 400px 0px 50px;
     height: 700px;
     width: 350px;
     `;
