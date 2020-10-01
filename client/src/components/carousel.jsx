@@ -36,6 +36,9 @@ height: 30px;
 width: 120px;
 margin-left: 450px;
 z-index: 99;
+: hover {
+  background: linear-gradient(white, transparent);
+}
 
 
 `;
@@ -51,6 +54,9 @@ width: 120px;
 margin-left: 450px;
 margin-top: -30px;
 z-index:99;
+: hover {
+  background: linear-gradient(white, transparent);
+}
 -moz-transform: scale(1, -1);
 -webkit-transform: scale(1, -1);
 -o-transform: scale(1, -1);
@@ -58,7 +64,7 @@ z-index:99;
 transform: scale(1, -1);
 `;
 
-const Carousel = ({ carousel }) => {
+const Carousel = ({ carousel, setImage }) => {
   const split = carousel.split(',');
   return (
     <div>
@@ -66,11 +72,13 @@ const Carousel = ({ carousel }) => {
         <Up>^</Up>
       </a>
       <Wrapper className="carousel-wrapper">
-        <Image id="carousel_photo_first" src={split[0]} />
-        <Image className="carousel__photo" src={split[1]} />
-        <Image className="carousel__photo" src={split[2]} />
-        <Image className="carousel__photo" src={split[3]} />
-        <Image id="carousel_photo_last" src={split[4]} />
+        {window.scrollTo(0, 0)}
+        <Image id="carousel_photo_first" onClick={() => { setImage(split[0]); }} src={split[0]} />
+        <Image className="carousel__photo" onClick={() => { setImage(split[1]); }} src={split[1]} />
+        <Image className="carousel__photo" onClick={() => { setImage(split[2]); }} src={split[2]} />
+        <Image className="carousel__photo" onClick={() => { setImage(split[3]); }} src={split[3]} />
+        <Image className="carousel__photo" onClick={() => { setImage(split[4]); }} src={split[4]} />
+        <Image id="carousel_photo_last" onClick={() => { setImage(split[5]); }} src={split[5]} />
       </Wrapper>
       <a href="#carousel_photo_last">
         <Down>^</Down>
@@ -81,6 +89,7 @@ const Carousel = ({ carousel }) => {
 
 Carousel.propTypes = {
   carousel: PropTypes.string.isRequired,
+  setImage: PropTypes.func.isRequired,
 };
 
 export default Carousel;

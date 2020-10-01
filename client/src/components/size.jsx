@@ -3,57 +3,25 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Size = ({ size }) => {
-  const available = [];
-  let counter = 0;
-  const shirts = ['Small', 'Medium', 'Large', 'X-Large'];
-  const pants = ['30', '32', '34', '36', '38', '40'];
-  if (size === 'pants') {
-    while (counter < 4) {
-      const inseam = Math.floor(Math.random() * 6);
-      const waist = Math.floor(Math.random() * 6);
-      const sizes = (`${pants[waist]}x${pants[inseam]}`);
-      available.push(sizes);
-      counter += 1;
-    }
-    return (
-      <div>
-        <Label>
-          Size
-        </Label>
-        <Flex>
-          {available[0]}
-        </Flex>
-        <Flex>
-          {available[1]}
-        </Flex>
-        <Flexed>
-          <Flex>
-            {available[2]}
-          </Flex>
-          <Flex>
-            {available[3]}
-          </Flex>
-        </Flexed>
-      </div>
-    );
-  }
+  const split = size.split(' ');
+
   return (
     <div>
       <Label>
         Size
       </Label>
       <Flex>
-        {shirts[0]}
+        {split[0]}
       </Flex>
       <Flex>
-        {shirts[1]}
+        {split[1]}
       </Flex>
       <Flexed>
         <Flex>
-          {shirts[2]}
+          {split[2]}
         </Flex>
         <Flex>
-          {shirts[3]}
+          {split[3]}
         </Flex>
       </Flexed>
     </div>

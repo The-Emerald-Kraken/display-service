@@ -1,8 +1,13 @@
 /* eslint-disable no-undef */
+require('mysql2/node_modules/iconv-lite').encodingExists('foo');
 import React from 'react';
+import regeneratorRuntime from "regenerator-runtime";
+import request from 'supertest';
+import axios from 'axios'
 import renderer from 'react-test-renderer';
 import { shallow, mount, render } from 'enzyme';
 
+import app from '../server/index.js'
 import App from '../client/src/components/App';
 import Description from '../client/src/components/description';
 import Name from '../client/src/components/name';
@@ -13,6 +18,10 @@ import Color from '../client/src/components/color';
 import Size from '../client/src/components/size';
 import Quantity from '../client/src/components/quantity';
 import Buttons from '../client/src/components/buttons';
+import Carousel from '../client/src/components/carousel';
+import { getData } from '../client/src/components/App';
+
+
 
 
 
@@ -21,7 +30,7 @@ import Buttons from '../client/src/components/buttons';
 
 describe('A suite', function() {
   it('have a product object', function() {
-    expect(shallow(<App />).find('product')).toEqual({});
+    expect(shallow(<App />).find('id')).toEqual({});
   });
   it('should render a description without throwing an error', function() {
     const descriptions =renderer
@@ -68,7 +77,41 @@ describe('A suite', function() {
     .create(<Buttons price ={'186.48'}/>);
     expect(buttons).toMatchSnapshot();
   });
+  it('should render a quantity box without throwing an error', function() {
+    const pictures =renderer
+    .create(<Carousel carousel={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'} setImage={jest.fn('https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg')}/>);
+    expect(pictures).toMatchSnapshot();
+  });
 });
+// beforeAll(done => {
+//   done()
+// })
+
+// afterAll(done => {
+//   done()
+// })
+
+// describe('Get /api/products/:id', () => {
+//   it('responds with json', async (done) => {
+//     const res = await request.agent('127.0.0.1:3002').get('/api/products/1');
+//       expect(res.body).toStrictEqual({
+//         "id": 1,
+//         "product_name": "Intelligent Frozen Chicken",
+//         "rating": 3,
+//         "ratingsAmt": 220,
+//         "price": "41.22",
+//         "color": "cyan",
+//         "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+//         "image": "https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg",
+//         "carousel": "https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/93.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/65.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/41.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/76.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/32.jpg, ",
+//         "clothing_sizes": "Small Medium Large X-Large",
+//         "createdAt": "2020-10-01T16:15:03.000Z",
+//         "updatedAt": "2020-10-01T16:15:03.000Z"
+//     })
+//       expect(res.status).toBe(200)
+//        done();
+//   });
+// });
 
 
 

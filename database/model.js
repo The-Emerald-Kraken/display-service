@@ -41,7 +41,7 @@ module.exports = sequelize.define('Products', {
     type: DataTypes.STRING(1000),
     allowNULL: false,
   },
-  clothing_type: {
+  clothing_sizes: {
     type: DataTypes.STRING,
     allowNULL: false,
   },

@@ -1,6 +1,7 @@
 {
   "name": "rei_clone",
   "jest": {
+    "testEnvironment": "node",
     "verbose": true,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
@@ -18,12 +19,13 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
+    "webpack": "webpack -d --watch",
+    "start": "nodemon server/index.js",
     "seed-db": "node database/index.js",
     "test": "jest --coverage"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.11.5",
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "enzyme": "^3.11.0",
@@ -37,6 +39,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
+    "regenerator-runtime": "^0.13.7",
     "sequelize": "^6.3.5",
     "styled-components": "^5.2.0",
     "webpack": "^4.44.2",
@@ -58,6 +61,7 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "file-loader": "^6.1.0",
     "jest": "^26.4.2",
-    "jest-puppeteer": "^4.4.0"
+    "jest-puppeteer": "^4.4.0",
+    "supertest": "^5.0.0"
   }
 }
