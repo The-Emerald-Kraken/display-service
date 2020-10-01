@@ -11,41 +11,49 @@ import Color from './color';
 import Size from './size';
 import Quantity from './quantity';
 import Buttons from './buttons';
+import Carousel from './carousel';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: {
-        id: 1,
-        product_name: 'Tasty Fresh Car',
-        rating: 4,
-        ratingsAmt: 421,
-        price: '186.48',
-        color: 'maroon',
-        description: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
-        image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
-        clothing_type: 'shirts',
-      },
+      id: 1,
+      product_name: 'Tasty Fresh Car',
+      rating: 4,
+      ratingsAmt: 421,
+      price: '186.48',
+      color: 'maroon',
+      description: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
+      image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
+      carousel: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
+      clothing_sizes: 'Small Medium Large X-Large',
+
     };
     this.getData = this.getData.bind(this);
+    this.setImage = this.setImage.bind(this);
   }
 
   componentDidMount() {
-    this.getData(1);
+    this.getData(2);
   }
 
   getData(id) {
     axios.get(`/api/products/${id}`)
       .then(({ data }) => {
-        this.setState({
-          product: data,
-        });
+        this.setState(
+          data,
+        );
       });
   }
 
+  setImage(pic) {
+    this.setState({
+      image: pic,
+    });
+  }
+
   render() {
-    const { product } = this.state;
+    const product = this.state;
     return (
       <div>
         <Header />
@@ -55,10 +63,11 @@ class App extends React.Component {
             <Star ratings={product.rating} id={product.id} ratingsAmt={product.ratingsAmt} />
             <Price price={product.price} />
             <Color color={product.color} price={product.price} />
-            <Size size={product.clothing_type} />
+            <Size size={product.clothing_sizes} />
             <Quantity />
             <Buttons price={product.price} />
           </Wrapper>
+          <Carousel carousel={product.carousel} setImage={this.setImage} />
           <Image>
             <Pictures image={product.image} />
           </Image>
@@ -69,12 +78,12 @@ class App extends React.Component {
   }
 }
 const Image = styled.div`
-    margin: 20px 0px 0px 600px;
+    margin: -590px 0px 0px 650px;
 `;
 
 const Wrapper = styled.div`
     float: right;
-    margin: 5px 400px 0px 50px;
+    margin: -80px 400px 0px 50px;
     height: 700px;
     width: 350px;
     `;

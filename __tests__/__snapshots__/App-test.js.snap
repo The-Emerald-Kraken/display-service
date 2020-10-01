@@ -150,6 +150,64 @@ exports[`A suite should render a quantity box without throwing an error 2`] = `
 </div>
 `;
 
+exports[`A suite should render a quantity box without throwing an error 3`] = `
+<div>
+  <a
+    href="#carousel_photo_first"
+  >
+    <button
+      className="sc-1a9g62a-2 cLcpNb"
+    >
+      ^
+    </button>
+  </a>
+  <div
+    className="sc-1a9g62a-0 jznplx carousel-wrapper"
+  >
+    <img
+      className="sc-1a9g62a-1 fqFzbI"
+      id="carousel_photo_first"
+      onClick={[Function]}
+      src="https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI"
+      id="carousel_photo_last"
+      onClick={[Function]}
+    />
+  </div>
+  <a
+    href="#carousel_photo_last"
+  >
+    <button
+      className="sc-1a9g62a-3 efDJXv"
+    >
+      ^
+    </button>
+  </a>
+</div>
+`;
+
 exports[`A suite should render a rating and number of ratings without throwing an error 1`] = `
 <div>
   <div
@@ -168,7 +226,7 @@ exports[`A suite should render a rating and number of ratings without throwing a
 
 exports[`A suite should render an image without throwing an error 1`] = `
 <img
-  className="nuhrh2-0 bpmCqm"
+  className="nuhrh2-0 iZQeTc"
 />
 `;
 
@@ -202,26 +260,20 @@ exports[`A suite should render size options without throwing an error 1`] = `
   <span
     className="k7f4n0-1 jQSePz"
   >
-    Small
+    shirts
   </span>
   <span
     className="k7f4n0-1 jQSePz"
-  >
-    Medium
-  </span>
+  />
   <div
     className="k7f4n0-2 eoQAub"
   >
     <span
       className="k7f4n0-1 jQSePz"
-    >
-      Large
-    </span>
+    />
     <span
       className="k7f4n0-1 jQSePz"
-    >
-      X-Large
-    </span>
+    />
   </div>
 </div>
 `;
