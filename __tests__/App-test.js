@@ -69,12 +69,14 @@ describe('A suite', function() {
   });
   it('should render a quantity box without throwing an error', function() {
     const quantity =renderer
-    .create(<Quantity />);
+    .create(<Quantity  incrementCount={jest.fn()}
+      decrementCount={jest.fn()}
+      count={1}/>);
     expect(quantity).toMatchSnapshot();
   });
   it('should render a quantity box without throwing an error', function() {
     const buttons =renderer
-    .create(<Buttons price ={'186.48'}/>);
+    .create(<Buttons price ={'186.48'} count={1}/>);
     expect(buttons).toMatchSnapshot();
   });
   it('should render a picture carousel without throwing an error', function() {

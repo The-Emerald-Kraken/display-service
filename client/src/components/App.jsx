@@ -80,7 +80,6 @@ class App extends React.Component {
             <Color color={product.color} price={product.price} />
             <Size size={product.clothing_sizes} />
             <Quantity
-              getQuantity={this.getQuantity}
               incrementCount={this.incrementCount}
               decrementCount={this.decrementCount}
               count={product.count}
