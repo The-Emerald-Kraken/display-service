@@ -189,8 +189,9 @@ padding: 2rem 1rem;
 color: #3278ae;
 margin-left:100px;
 `;
-const Buttons = ({ price }) => {
-  const addPrice = `Add to cart $${price}`;
+const Buttons = ({ price, count }) => {
+  const totalPrice = count * Number(price);
+  const addPrice = `Add to cart $${totalPrice.toFixed(2)}`;
 
   return (
     <div>
@@ -223,6 +224,8 @@ const Buttons = ({ price }) => {
 
 Buttons.propTypes = {
   price: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+
 };
 
 export default Buttons;

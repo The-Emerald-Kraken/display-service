@@ -49,6 +49,7 @@ const seed = () => {
           image,
           carousel,
           clothing_sizes: picked,
+          count: 1,
         })
       ));
     counter += 1;

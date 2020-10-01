@@ -72,7 +72,6 @@ const Carousel = ({ carousel, setImage }) => {
         <Up>^</Up>
       </a>
       <Wrapper className="carousel-wrapper">
-        {window.scrollTo(0, 0)}
         <Image id="carousel_photo_first" onClick={() => { setImage(split[0]); }} src={split[0]} />
         <Image className="carousel__photo" onClick={() => { setImage(split[1]); }} src={split[1]} />
         <Image className="carousel__photo" onClick={() => { setImage(split[2]); }} src={split[2]} />
