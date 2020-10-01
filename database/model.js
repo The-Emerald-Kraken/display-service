@@ -45,6 +45,9 @@ module.exports = sequelize.define('Products', {
     type: DataTypes.STRING,
     allowNULL: false,
   },
+  count: {
+    type: DataTypes.INTEGER,
+  },
 }, {
   sequelize,
   modelName: 'Products',

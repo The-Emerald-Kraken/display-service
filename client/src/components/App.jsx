@@ -27,10 +27,12 @@ class App extends React.Component {
       image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
       carousel: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
       clothing_sizes: 'Small Medium Large X-Large',
-
+      count: 1,
     };
     this.getData = this.getData.bind(this);
     this.setImage = this.setImage.bind(this);
+    this.incrementCount = this.incrementCount.bind(this);
+    this.decrementCount = this.decrementCount.bind(this);
   }
 
   componentDidMount() {
@@ -52,6 +54,19 @@ class App extends React.Component {
     });
   }
 
+  incrementCount() {
+    this.setState((prevState) => (
+      { count: prevState.count + 1 }));
+  }
+
+  decrementCount() {
+    const total = this.state;
+    if (total.count > 1) {
+      this.setState((prevState) => (
+        { count: prevState.count - 1 }));
+    }
+  }
+
   render() {
     const product = this.state;
     return (
@@ -64,8 +79,12 @@ class App extends React.Component {
             <Price price={product.price} />
             <Color color={product.color} price={product.price} />
             <Size size={product.clothing_sizes} />
-            <Quantity />
-            <Buttons price={product.price} />
+            <Quantity
+              incrementCount={this.incrementCount}
+              decrementCount={this.decrementCount}
+              count={product.count}
+            />
+            <Buttons price={product.price} count={product.count} />
           </Wrapper>
           <Carousel carousel={product.carousel} setImage={this.setImage} />
           <Image>

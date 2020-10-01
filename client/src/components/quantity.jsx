@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Minus = styled.button`
@@ -30,6 +31,8 @@ margin-top: 5px;
 margin-bottom: 30px;
 border: 1px solid #c5c5c5;
 border-radius: 3px;
+text-align: center;
+font-size: 16px;
 `;
 
 const Text = styled.div`
@@ -39,16 +42,23 @@ font-size: 16px;
 line-height: 20px;
 `;
 
-const Quantity = () => (
+const Quantity = ({ incrementCount, decrementCount, count }) => (
   <div>
     <Text>
       Quantity
     </Text>
-    <Minus data-ui="quantity-decrement" />
-    <Amount type="number" min="1" max="9999" minlength="1" maxlength="4" data-ui="product-buygrid-quantity-box" />
-    <Plus data-ui="quantity-increment" />
+    <Minus onClick={() => decrementCount()} />
+    <Amount type="text" min="1" max="9999" minlength="1" maxlength="4" placeholder="1" value={count} />
+    <Plus onClick={() => incrementCount()} />
     <hr />
   </div>
 );
+
+Quantity.propTypes = {
+  count: PropTypes.number.isRequired,
+  decrementCount: PropTypes.func.isRequired,
+  incrementCount: PropTypes.func.isRequired,
+
+};
 
 export default Quantity;

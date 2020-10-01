@@ -32,6 +32,64 @@ exports[`A suite should render a name without throwing an error 1`] = `
 </div>
 `;
 
+exports[`A suite should render a picture carousel without throwing an error 1`] = `
+<div>
+  <a
+    href="#carousel_photo_first"
+  >
+    <button
+      className="sc-1a9g62a-2 cLcpNb"
+    >
+      ^
+    </button>
+  </a>
+  <div
+    className="sc-1a9g62a-0 jznplx carousel-wrapper"
+  >
+    <img
+      className="sc-1a9g62a-1 fqFzbI"
+      id="carousel_photo_first"
+      onClick={[Function]}
+      src="https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      onClick={[Function]}
+      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
+    />
+    <img
+      className="sc-1a9g62a-1 fqFzbI"
+      id="carousel_photo_last"
+      onClick={[Function]}
+    />
+  </div>
+  <a
+    href="#carousel_photo_last"
+  >
+    <button
+      className="sc-1a9g62a-3 efDJXv"
+    >
+      ^
+    </button>
+  </a>
+</div>
+`;
+
 exports[`A suite should render a price without throwing an error 1`] = `
 <div
   className="sc-5tcji-0 gNWCqj"
@@ -58,18 +116,19 @@ exports[`A suite should render a quantity box without throwing an error 1`] = `
   </div>
   <button
     className="b4lb5i-0 fpcTTc"
-    data-ui="quantity-decrement"
+    onClick={[Function]}
   />
   <input
-    className="b4lb5i-2 ijUctX"
-    data-ui="product-buygrid-quantity-box"
+    className="b4lb5i-2 iRZQYN"
     max="9999"
     min="1"
-    type="number"
+    placeholder="1"
+    type="text"
+    value={1}
   />
   <button
     className="b4lb5i-1 hWdolp"
-    data-ui="quantity-increment"
+    onClick={[Function]}
   />
   <hr />
 </div>
@@ -147,64 +206,6 @@ exports[`A suite should render a quantity box without throwing an error 2`] = `
       REI return policy
     </div>
   </div>
-</div>
-`;
-
-exports[`A suite should render a quantity box without throwing an error 3`] = `
-<div>
-  <a
-    href="#carousel_photo_first"
-  >
-    <button
-      className="sc-1a9g62a-2 cLcpNb"
-    >
-      ^
-    </button>
-  </a>
-  <div
-    className="sc-1a9g62a-0 jznplx carousel-wrapper"
-  >
-    <img
-      className="sc-1a9g62a-1 fqFzbI"
-      id="carousel_photo_first"
-      onClick={[Function]}
-      src="https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
-    />
-    <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
-      onClick={[Function]}
-      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
-    />
-    <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
-      onClick={[Function]}
-      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
-    />
-    <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
-      onClick={[Function]}
-      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
-    />
-    <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
-      onClick={[Function]}
-      src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
-    />
-    <img
-      className="sc-1a9g62a-1 fqFzbI"
-      id="carousel_photo_last"
-      onClick={[Function]}
-    />
-  </div>
-  <a
-    href="#carousel_photo_last"
-  >
-    <button
-      className="sc-1a9g62a-3 efDJXv"
-    >
-      ^
-    </button>
-  </a>
 </div>
 `;
 
