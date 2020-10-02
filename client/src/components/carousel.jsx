@@ -18,12 +18,15 @@ overflow: -moz-scrollbars-none;
 `;
 
 const Image = styled.img`
+background-size: contain;
+background-repeat: no-repeat;
 height: 112px;
 width: 84px;
 margin 4px;
 padding: 3px;
 border: 1px solid silver;
 border-radius: 5px;
+clip-path: inset(1px);
 `;
 const Up = styled.button`
 position: absolute;
@@ -69,7 +72,7 @@ const Carousel = ({ carousel, setImage }) => {
   return (
     <div>
       <a href="#carousel_photo_first">
-        <Up>^</Up>
+        <Up className="up">^</Up>
       </a>
       <Wrapper className="carousel-wrapper">
         <Image id="carousel_photo_first" onClick={() => { setImage(split[0]); }} src={split[0]} />

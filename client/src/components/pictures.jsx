@@ -10,13 +10,14 @@ const Img = styled.img`
    width: 450px;
    clip-path: inset(1px);
    `;
-const Pictures = ({ image }) => (
+const Pictures = ({ image, showModal }) => (
 
-  <Img inputSrc={image} />
+  <Img inputSrc={image} onClick={() => showModal()} />
 );
 
 Pictures.propTypes = {
   image: PropTypes.string.isRequired,
+  showModal: PropTypes.func.isRequired,
 };
 
 export default Pictures;

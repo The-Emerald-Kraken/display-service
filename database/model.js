@@ -48,6 +48,10 @@ module.exports = sequelize.define('Products', {
   count: {
     type: DataTypes.INTEGER,
   },
+  show: {
+    type: DataTypes.BOOLEAN,
+  },
+
 }, {
   sequelize,
   modelName: 'Products',

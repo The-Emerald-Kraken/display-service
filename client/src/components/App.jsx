@@ -12,31 +12,34 @@ import Size from './size';
 import Quantity from './quantity';
 import Buttons from './buttons';
 import Carousel from './carousel';
+import Modal from './modal';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: 1,
-      product_name: 'Tasty Fresh Car',
-      rating: 4,
-      ratingsAmt: 421,
-      price: '186.48',
+      product_name: 'Ergonomic Concrete Shoes',
+      rating: 2,
+      ratingsAmt: 345,
+      price: '88.88',
       color: 'maroon',
-      description: 'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
+      description: 'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
       image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
-      carousel: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
-      clothing_sizes: 'Small Medium Large X-Large',
+      carousel: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/92.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/70.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/14.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/84.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/56.jpg, ',
+      clothing_sizes: '30x32 30x36 30x36 40x40 ',
       count: 1,
+      show: false,
     };
     this.getData = this.getData.bind(this);
     this.setImage = this.setImage.bind(this);
     this.incrementCount = this.incrementCount.bind(this);
     this.decrementCount = this.decrementCount.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
   componentDidMount() {
-    this.getData(2);
   }
 
   getData(id) {
@@ -67,8 +70,28 @@ class App extends React.Component {
     }
   }
 
+  showModal() {
+    this.setState({
+      show: true,
+    });
+  }
+
+  hideModal() {
+    this.setState({
+      show: false,
+    });
+  }
+
   render() {
     const product = this.state;
+    if (product.show) {
+      return (
+        <div>
+          <Header />
+          <Modal show={product.show} image={product.image} hideModal={this.hideModal} />
+        </div>
+      );
+    }
     return (
       <div>
         <Header />
@@ -88,7 +111,7 @@ class App extends React.Component {
           </Wrapper>
           <Carousel carousel={product.carousel} setImage={this.setImage} />
           <Image>
-            <Pictures image={product.image} />
+            <Pictures image={product.image} showModal={this.showModal} />
           </Image>
           <Description description={product.description} />
         </div>
@@ -96,6 +119,7 @@ class App extends React.Component {
     );
   }
 }
+
 const Image = styled.div`
     margin: -590px 0px 0px 650px;
 `;
