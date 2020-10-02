@@ -7,8 +7,8 @@ import axios from 'axios'
 import renderer from 'react-test-renderer';
 import { shallow, mount, render } from 'enzyme';
 
-import app from '../server/index.js'
 import App from '../client/src/components/App';
+import {setImage} from '../client/src/components/App';
 import Description from '../client/src/components/description';
 import Name from '../client/src/components/name';
 import Rating from '../client/src/components/rating';
@@ -19,11 +19,13 @@ import Size from '../client/src/components/size';
 import Quantity from '../client/src/components/quantity';
 import Buttons from '../client/src/components/buttons';
 import Carousel from '../client/src/components/carousel';
-import { getData } from '../client/src/components/App';
+import Modal from '../client/src/components/modal';
 
 
 
 
+
+const mockFn = jest.fn();
 
 
 
@@ -44,7 +46,7 @@ describe('A suite', function() {
   });
   it('should render an image without throwing an error', function() {
     const images =renderer
-    .create(<Pictures image={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'}/>);
+    .create(<Pictures image={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'} showModel={mockFn(true)}/>);
     expect(images).toMatchSnapshot();
   });
   it('should render a rating and number of ratings without throwing an error', function() {
@@ -83,6 +85,24 @@ describe('A suite', function() {
     const pictures =renderer
     .create(<Carousel carousel={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'} setImage={jest.fn('https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg')}/>);
     expect(pictures).toMatchSnapshot();
+  });
+  it('should call mock function when button is clicked', () => {
+    console.log(App);
+    const tree = shallow(
+      <Carousel carousel={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'} setImage={mockFn('https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg')}/>
+    );
+    tree.simulate('click');
+    expect(mockFn).toHaveBeenCalled();
+  });
+  it('should render size options without throwing an error', function() {
+    const hide =renderer
+    .create(<Modal image={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'} hideModal={true} />);
+    expect(hide).toMatchSnapshot();
+  });
+  it('should render size options without throwing an error', function() {
+    const hide =renderer
+    .create(<Modal image={'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg'} hideModal={false} />);
+    expect(hide).toMatchSnapshot();
   });
 });
 

@@ -38,7 +38,7 @@ exports[`A suite should render a picture carousel without throwing an error 1`] 
     href="#carousel_photo_first"
   >
     <button
-      className="sc-1a9g62a-2 cLcpNb"
+      className="sc-1a9g62a-2 cLcpNb up"
     >
       ^
     </button>
@@ -47,33 +47,33 @@ exports[`A suite should render a picture carousel without throwing an error 1`] 
     className="sc-1a9g62a-0 jznplx carousel-wrapper"
   >
     <img
-      className="sc-1a9g62a-1 fqFzbI"
+      className="sc-1a9g62a-1 eAoxon"
       id="carousel_photo_first"
       onClick={[Function]}
       src="https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
     />
     <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      className="sc-1a9g62a-1 eAoxon carousel__photo"
       onClick={[Function]}
       src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
     />
     <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      className="sc-1a9g62a-1 eAoxon carousel__photo"
       onClick={[Function]}
       src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
     />
     <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      className="sc-1a9g62a-1 eAoxon carousel__photo"
       onClick={[Function]}
       src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
     />
     <img
-      className="sc-1a9g62a-1 fqFzbI carousel__photo"
+      className="sc-1a9g62a-1 eAoxon carousel__photo"
       onClick={[Function]}
       src=" https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg"
     />
     <img
-      className="sc-1a9g62a-1 fqFzbI"
+      className="sc-1a9g62a-1 eAoxon"
       id="carousel_photo_last"
       onClick={[Function]}
     />
@@ -228,6 +228,7 @@ exports[`A suite should render a rating and number of ratings without throwing a
 exports[`A suite should render an image without throwing an error 1`] = `
 <img
   className="nuhrh2-0 iZQeTc"
+  onClick={[Function]}
 />
 `;
 
@@ -278,3 +279,7 @@ exports[`A suite should render size options without throwing an error 1`] = `
   </div>
 </div>
 `;
+
+exports[`A suite should render size options without throwing an error 2`] = `null`;
+
+exports[`A suite should render size options without throwing an error 3`] = `null`;
