@@ -95,7 +95,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <div>
+        <Flex>
           <Wrapper>
             <Name name={product.product_name} />
             <Star ratings={product.rating} id={product.id} ratingsAmt={product.ratingsAmt} />
@@ -114,11 +114,16 @@ class App extends React.Component {
             <Pictures image={product.image} showModal={this.showModal} />
           </Image>
           <Description description={product.description} />
-        </div>
+        </Flex>
       </div>
     );
   }
 }
+const Flex = styled.div`
+height: auto;
+width: 1920px;
+margin: 0 auto;
+`;
 
 const Image = styled.div`
     margin: -590px 0px 0px 650px;

@@ -225,6 +225,22 @@ exports[`A suite should render a rating and number of ratings without throwing a
 </div>
 `;
 
+exports[`A suite should render a rating and number of ratings without throwing an error 2`] = `
+<div>
+  <div
+    className="sc-179h418-1 gaNVZM"
+  />
+  <span>
+    1 | 292
+  </span>
+  <span
+    className="sc-179h418-0 hPXnqg"
+  >
+    Item  #1
+  </span>
+</div>
+`;
+
 exports[`A suite should render an image without throwing an error 1`] = `
 <img
   className="nuhrh2-0 iZQeTc"

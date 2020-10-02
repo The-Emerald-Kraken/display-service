@@ -54,6 +54,11 @@ describe('A suite', function() {
     .create(<Rating ratings={4} id={1} ratingsAmt={292}/>);
     expect(rating).toMatchSnapshot();
   });
+  it('should render a rating and number of ratings without throwing an error', function() {
+    const rating =renderer
+    .create(<Rating ratings={1} id={1} ratingsAmt={292}/>);
+    expect(rating).toMatchSnapshot();
+  });
   it('should render a price without throwing an error', function() {
     const pricing =renderer
     .create(<Price price={'186.48'}/>);
