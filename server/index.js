@@ -12,6 +12,11 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  next();
+});
+
 app.get('/api/products/:id', async (req, res) => {
   await Model.findOne({ where: { id: req.params.id } })
     .then((data) => res.send(data))

@@ -18,17 +18,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 1,
-      product_name: 'Ergonomic Concrete Shoes',
-      rating: 2,
-      ratingsAmt: 345,
-      price: '88.88',
-      color: 'maroon',
-      description: 'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
-      image: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg',
-      carousel: 'https://fecclothes.s3-us-west-2.amazonaws.com/Project/1.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/92.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/70.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/14.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/84.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/56.jpg, ',
-      clothing_sizes: '30x32 30x36 30x36 40x40 ',
-      count: 1,
+      id: 0,
+      product_name: '',
+      rating: 0,
+      ratingsAmt: 0,
+      price: '',
+      color: '',
+      description: '',
+      image: '',
+      carousel: '',
+      clothing_sizes: '',
+      count: 0,
       show: false,
     };
     this.getData = this.getData.bind(this);
@@ -40,14 +40,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.getData(12);
   }
 
   getData(id) {
     axios.get(`/api/products/${id}`)
       .then(({ data }) => {
-        this.setState(
-          data,
-        );
+        this.setState(data);
       });
   }
 
