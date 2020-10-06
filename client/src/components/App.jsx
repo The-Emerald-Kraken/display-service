@@ -40,7 +40,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getData(12);
+    this.getData(1);
   }
 
   getData(id) {
