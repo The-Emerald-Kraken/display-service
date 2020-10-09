@@ -15,8 +15,8 @@ const seed = () => {
     const rating = Math.ceil(Math.random() * 5);
     const ratingsAmt = Math.floor(Math.random() * 1000);
     const color = faker.commerce.color();
-    const image = `https://fecclothes.s3-us-west-2.amazonaws.com/Project/${counter + 1}.jpg`;
-    const carousel = `https://fecclothes.s3-us-west-2.amazonaws.com/Project/${counter + 1}.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/${random1}.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/${random2}.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/${random3}.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/${random4}.jpg, https://fecclothes.s3-us-west-2.amazonaws.com/Project/${random5}.jpg, `;
+    const image = `https://compressedfec.s3-us-west-2.amazonaws.com/Project/${counter + 1}.jpg`;
+    const carousel = `https://compressedfec.s3-us-west-2.amazonaws.com/Project/${counter + 1}.jpg, https://compressedfec.s3-us-west-2.amazonaws.com/Project/${random1}.jpg, https://compressedfec.s3-us-west-2.amazonaws.com/Project/${random2}.jpg, https://compressedfec.s3-us-west-2.amazonaws.com/Project/${random3}.jpg, https://compressedfec.s3-us-west-2.amazonaws.com/Project/${random4}.jpg, https://compressedfec.s3-us-west-2.amazonaws.com/Project/${random5}.jpg, `;
     const picker = () => {
       let count = 0;
       let pants = '';
